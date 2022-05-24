@@ -79,7 +79,7 @@ class Square extends Piece {
         let shape = [
             [[0,0], [0,1], [1, 0], [1, 1]]
         ];
-        let color = "#EF476F";
+        let color = "#66FF00";
         super(x, y, color, shape)
     }
 }
@@ -94,7 +94,7 @@ class Rectangle extends Piece {
             [[-1,1],[0,1],[1,1],[2,1]],
             [[0,-1],[0,0],[0,1],[0,2]]
         ]
-        let color = "#F78C6B";
+        let color = "#1974D2";
         super(x, y, color, shape)
     }
 }
@@ -108,7 +108,7 @@ class RightL extends Piece {
             [[-1,0],[0,0],[1,0],[1,1]],
             [[0,-1],[0,0],[0,1],[-1,1]]
         ]
-        let color = "#FFD166";
+        let color = "#08E8DE";
         super(x, y, color, shape)
     }
 }
@@ -121,7 +121,7 @@ class LeftL extends Piece {
             [[-1,1],[-1,0],[0,0],[1,0]],
             [[-1,-1],[0,-1],[0,0],[0,1]]
         ]
-        let color = "#06D6A0";
+        let color = "#FFF000";
         super(x, y, color, shape)
     }
 }
@@ -135,7 +135,7 @@ class RightS extends Piece {
             [[-1,1],[0,1],[0,0],[1,0]],
             [[-1,-1],[-1,0],[0,0],[0,1]],
         ]
-        let color = "#118AB2";
+        let color = "#FFAA1D";
         super(x, y, color, shape)
     }
 }
@@ -149,7 +149,7 @@ class LeftS extends Piece {
             [[-1,0],[0,0],[0,1],[1,1]],
             [[0,0],[0,-1],[-1,1],[-1,0]]
         ]
-        let color = "#073B4C";
+        let color = "#FF76ED";
         super(x, y, color, shape)
     }
 }
@@ -163,7 +163,7 @@ class T extends Piece {
             [[-1,0],[0,0],[1,0],[0,1]],
             [[-1,0],[0,0],[0,1],[0,-1]]
         ]
-        let color = "#FA52FA";
+        let color = "#FF4343";
         super(x, y, color, shape)
     }
 }

@@ -10,4 +10,5 @@
 - Fix position of pieces so that it spawns at the highest most point always 
 - Responsive for different screen layouts 
 - Improved Upcoming System (1 - 7 everytime. Not truly random.)
-- Add wall and floor bounces  
+- Add wall and floor bounces 
+- Game save state 
