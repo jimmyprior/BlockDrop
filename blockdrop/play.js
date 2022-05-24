@@ -14,7 +14,7 @@ gameCanvas.height = gameHeight * gameScale;
 
 const pauseButton = document.getElementById("pause");
 const restartButton = document.getElementById("restart");
-//const highScoreField = document.getElementById("high-score");
+const highScoreField = document.getElementById("high-score");
 const scoreField = document.getElementById("score");
 
 
@@ -41,7 +41,7 @@ function onKeyDown(e) {
 
     game.onKeyPress(e.key, gameCtx);
     scoreField.innerHTML = "Score: " + game.getScore();
-    
+    highScoreField.innerHTML = "High Score: " + game.highScore;
 }
 
 
@@ -81,6 +81,7 @@ function updateGame() {
     game.update(gameCtx);
 
     scoreField.innerHTML = "Score: " + game.getScore();
+    highScoreField.innerHTML = "High Score: " + game.highScore;
 
     if (game.isOver) {
         clearInterval(intervalId);

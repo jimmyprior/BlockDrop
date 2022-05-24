@@ -10,8 +10,9 @@ class Game {
         //starting positions of the piece
         this.start = {x : 4, y : 1}
 
+        this.highScore = this.getHighScore();
         this.score = 0;
-    
+
         this.scale = 20;
         this.width = 10;
         this.height = 23;
@@ -25,6 +26,23 @@ class Game {
         this.isOver = false;
     }
 
+
+
+    getHighScore() {
+        let score = window.localStorage.getItem("high-score")
+        if (score !== null) {
+            return score
+        }
+        return 0
+    }
+
+
+    setHighScore() {
+        if (this.getScore() > this.highScore) {
+            this.highScore = this.getScore();
+            window.localStorage.setItem("high-score", this.getScore());
+        }
+    }
 
     onKeyPress(key, ctx) {
         if (key == "ArrowRight") {
@@ -41,23 +59,24 @@ class Game {
 
         else if (key == "ArrowDown") {
             this.score += 1;
-            this.move(0, 1, false)
+            this.move(0, 1, false);
         }
 
         else if (key == " ") {
             let move = true;
             while (move) {
+                this.score += 1;
                 move = this.move(0, 1, false)
             }
             this.setNewActive()
         }
-
+        this.setHighScore()
         this.draw(ctx)
     }
 
 
     getScore() {
-        return this.score + this.board.breaks * 10;
+        return this.score + this.board.breaks * 100;
     }
 
 
